@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit Sentiment Analyzer</title>
+    <link rel="shortcut icon" href="{{ url_for('favicon', filename='image.png') }}" type="image/png">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Reddit Sentiment Analyzer</h1>
+        <form id="redditForm" class="form">
+            <label for="username" class="label">Enter Reddit Username:</label>
+            <input type="text" id="username" name="username" class="input" required>
+            <button type="submit" class="button">Analyze</button>
+        </form>
+        <div id="analysisResult" class="result"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
